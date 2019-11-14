@@ -1,5 +1,6 @@
 # images
 /img/*
 
-# IDE
+# dev
 .vscode
+/env/

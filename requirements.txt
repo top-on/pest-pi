@@ -1,2 +1,8 @@
 tensorflow~=1.13.0
+h5py  # tensorflow
 picamera
+pillow  # tensorflow
+wget
+# dev
+pylama
+jupyter
