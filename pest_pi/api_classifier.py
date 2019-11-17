@@ -2,12 +2,12 @@
 
 import numpy as np
 from fastapi import FastAPI
-from tensorflow.keras.preprocessing.image import load_img, img_to_array
 from tensorflow.keras.applications.mobilenet_v2 import (
-    decode_predictions,
     MobileNetV2,
+    decode_predictions,
     preprocess_input,
 )
+from tensorflow.keras.preprocessing.image import img_to_array, load_img
 
 app = FastAPI()
 
