@@ -7,6 +7,7 @@ app = FastAPI()
 
 model = get_classifier()  # pre-load classifier
 
+
 @app.get("/")
 async def read_root(fname: str):
     # load and pre-process image from file
