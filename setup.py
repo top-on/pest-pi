@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 from setuptools import setup
 
 
@@ -18,7 +19,7 @@ setup(
     keywords="raspberry pi tensorflow",
     url="https://github.com/thorbenJensen/pest-pi",
     packages=["pest_pi"],
-    scripts=['bin/start-api-server.sh'],
+    scripts=[str(p) for p in Path("bin").glob("**/*")],
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Topic :: Utilities",
