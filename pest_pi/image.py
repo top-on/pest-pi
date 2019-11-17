@@ -11,8 +11,10 @@ from tensorflow.keras.preprocessing.image import img_to_array, load_img
 
 def prepare_image(file_path: str) -> np.ndarray:
     """Read image from file and preprocess for MobileNetv2
+
     Args:
         file_path (str): Path to image file.
+
     Returns:
         np.ndarray: Preprocessed images.
     """
