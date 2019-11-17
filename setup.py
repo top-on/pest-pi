@@ -31,7 +31,6 @@ setup(
         "tensorflow~=1.13.0",
         "h5py",  # tensorflow
         "uvicorn",  # fastapi
-        # picamera
         "pillow",  # tensorflow
         "wget",
     ],
