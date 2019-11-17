@@ -1,6 +1,6 @@
 import os
-from pathlib import Path
-from setuptools import setup
+from glob import glob
+from setuptools import setup, find_packages
 
 
 # Utility function to read the README file.
@@ -10,7 +10,7 @@ def read(fname):
 
 setup(
     name="pest_pi",
-    version="1.0.0",
+    version="1.0.1",
     author="Thorben Jensen",
     author_email="jensen.thorben@gmail.com",
     license="MIT",
@@ -18,8 +18,8 @@ setup(
     long_description=read("README.md"),
     keywords="raspberry pi tensorflow",
     url="https://github.com/thorbenJensen/pest-pi",
-    packages=["pest_pi"],
-    scripts=[str(p) for p in Path("bin").glob("**/*")],
+    packages=find_packages(),
+    scripts=glob("bin/*"),
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Topic :: Utilities",
