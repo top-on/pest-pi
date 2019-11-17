@@ -8,3 +8,5 @@
 # python
 __pycache__
 *.egg-info
+.eggs/
+.pytest_cache/
