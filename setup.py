@@ -10,7 +10,7 @@ def read(fname):
 
 setup(
     name="pest_pi",
-    version="0.1.0",
+    version="1.0.0",
     author="Thorben Jensen",
     author_email="jensen.thorben@gmail.com",
     license="MIT",
