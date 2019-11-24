@@ -9,6 +9,21 @@ from tensorflow.keras.applications.mobilenet_v2 import (
 from tensorflow.keras.preprocessing.image import img_to_array, load_img
 
 
+def preprocess_array(img_arr: np.ndarray) -> np.ndarray:
+    """Preprocess array for MobileNetv2
+
+    Args:
+        img_arr (np.ndarray): Data input, assuming shape of (224, 224, 3)
+
+    Returns:
+        np.ndarray: Array of image, proprocessed for use with MobileNetv2.
+    """
+    assert img_arr.shape == (224, 224, 3), "Input has wrong shape for mobilenet_v2"
+    img_exp = np.expand_dims(img_arr, axis=0)
+    img_prep = preprocess_input(img_exp)
+    return img_prep
+
+
 def prepare_image(file_path: str) -> np.ndarray:
     """Read image from file and preprocess for MobileNetv2
 
@@ -20,8 +35,8 @@ def prepare_image(file_path: str) -> np.ndarray:
     """
     img = load_img(file_path, target_size=(224, 224))
     img_array = img_to_array(img)
-    img_array_expanded_dims = np.expand_dims(img_array, axis=0)
-    return preprocess_input(img_array_expanded_dims)
+    img_prep = preprocess_array(img_array)
+    return img_prep
 
 
 def get_classifier() -> MobileNetV2:
