@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="pest_pi",
-    version="1.0.1",
+    version="1.1.1",
     author="Thorben Jensen",
     author_email="jensen.thorben@gmail.com",
     license="MIT",
