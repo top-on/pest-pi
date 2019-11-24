@@ -1,11 +1,5 @@
-import os
 from glob import glob
 from setuptools import setup, find_packages
-
-
-# Utility function to read the README file.
-def read(fname):
-    return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 
 setup(
@@ -15,7 +9,6 @@ setup(
     author_email="jensen.thorben@gmail.com",
     license="MIT",
     description=("Pest monitoring with Raspberry Pi."),
-    long_description=read("README.md"),
     keywords="raspberry pi tensorflow",
     url="https://github.com/thorbenJensen/pest-pi",
     packages=find_packages(),
@@ -35,6 +28,6 @@ setup(
     ],
     extras_require={
         "pi": ["picamera"],  # deployment on Raspberry Pi
-        "dev": ["black", "pylama", "jupyter"],
+        "dev": ["black", "jupyter", "pylama", "rope"],
     },
 )
