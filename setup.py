@@ -28,6 +28,6 @@ setup(
     ],
     extras_require={
         "pi": ["picamera"],  # deployment on Raspberry Pi
-        "dev": ["black", "jupyter", "pylama", "rope"],
+        "dev": ["black", "jupyter", "pylama", "pytest", "rope"],
     },
 )
