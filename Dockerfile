@@ -4,7 +4,7 @@ RUN apt-get update && \
     apt-get install -y \ 
     build-essential \
     git
-# install dependencies
+# install python dependencies
 WORKDIR /code
 COPY requirements.txt .
 COPY setup.py .
