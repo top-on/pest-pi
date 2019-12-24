@@ -20,7 +20,7 @@ setup(
     ],
     install_requires=[
         "fastapi",
-        "tensorflow~=1.13.0",
+        "tensorflow~=1.15.0",
         "h5py",  # tensorflow
         "uvicorn",  # fastapi
         "pillow",  # tensorflow
